@@ -95,6 +95,13 @@ class SortingRobot:
     def sort(self):
         """
         Sort the robot's list.
+        Breakdown of pseudocode:
+        The robot's light should be on. If off, put on
+        While on, if it can move right, it should move right
+        Pick up the item on the right and compare it
+        If item is less, swap it and move right
+        Repeat this process till the entire list is sorted
+        Turn robot's light off
         """
         # Fill this out
         pass
