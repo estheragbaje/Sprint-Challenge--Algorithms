@@ -41,3 +41,10 @@ Adding it all up: O(n + 2) gives O(n) which is a Linear Time
 
 
 The total runtime would be linear complexity
+
+
+## USsing recursion
+1. Base case is the floor the egg gets broken
+2. Else go up a floor and throw the egg again. Check if broken.
+3. If not, repeat process, go up and throw eggs again.
+4. Return the floor, f where the egg gets broken
