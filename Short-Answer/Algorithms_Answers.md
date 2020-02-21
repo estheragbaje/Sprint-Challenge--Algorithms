@@ -37,7 +37,7 @@ Adding it all up: O(n + 2) gives O(n) which is a Linear Time
 1. Get the numbers of floors in the storey, `n` O(1)
 2. Pick a pivot to determine the current floor, f. In this case, the pivot can be the middle floor which is `n//2`.Round up the division into a whole number using int  O(1)
 3. Start throwing eggs from this middle floor O(1)
-4. If the eggs break, go down the floor and throw egg again. Repeat this process till the last floor where the egg breaks. Return the last floor where the egg breaks. O(n)
-5. Else, if the egg doesn't break, go up the floor and throw egg again. Repeat this process till the egg breaks. Return the floor egg gets broken. O(n)
+4. If the egg doesn't break, go up the floor and throw egg again. Repeat this process till the egg breaks. Return the floor egg gets broken. O(n)
+
 
 The total runtime would be linear complexity
