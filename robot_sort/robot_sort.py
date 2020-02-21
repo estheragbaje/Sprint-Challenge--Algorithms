@@ -109,18 +109,21 @@ class SortingRobot:
 
         #while robot can move right, move right and compare item
           while self.can_move_right():
-            self.move_right()
+            self.swap_item()
             self.compare_item()
         
         #on comparing item to 1, do the following
             if self.compare_item() == 1:
               self.swap_item()
               self.move_left()
-              self.swap_item()
             else:
               self.move_left()
               self.swap_item()
               self.move_right()
+             
+        #while robot can move left
+          while self.can_move_left():
+            self.move_left()
 
         #turn light off
         while self.light_is_on() == True:
