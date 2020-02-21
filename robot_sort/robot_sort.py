@@ -103,9 +103,28 @@ class SortingRobot:
         Repeat this process till the entire list is sorted
         Turn robot's light off
         """
-        # Fill this out
-        pass
+        #check if light is on, if not, put robot's light on
+        while self.light_is_on() == False:
+          self.set_light_on()
 
+        #while robot can move right, move right and compare item
+          while self.can_move_right():
+            self.move_right()
+            self.compare_item()
+        
+        #on comparing item to 1, do the following
+            if self.compare_item() == 1:
+              self.swap_item()
+              self.move_left()
+              self.swap_item()
+            else:
+              self.move_left()
+              self.swap_item()
+              self.move_right()
+
+        #turn light off
+        while self.light_is_on() == True:
+          self.set_light_off()
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
