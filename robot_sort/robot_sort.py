@@ -95,10 +95,42 @@ class SortingRobot:
     def sort(self):
         """
         Sort the robot's list.
+        Breakdown of pseudocode:
+        The robot's light should be on. If off, put on
+        While on, if it can move right, it should move right
+        Pick up the item on the right and compare it
+        If item is less, swap it and move right
+        Repeat this process till the entire list is sorted
+        Turn robot's light off
         """
-        # Fill this out
-        pass
+      
+        #check if light is on, if not, put robot's light on
+        while self.light_is_on() == False:
+            self.set_light_on()
 
+        # #while robot can move right, move right and compare item
+            while self.can_move_right():
+                self.swap_item()
+                self.move_right()
+
+        #on comparing item to 1, do the following
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.move_left()
+                    self.swap_item()
+                    self.set_light_off()
+                else:
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+
+          #while robot can move left
+            while self.can_move_left():
+                self.move_left()
+
+     
+
+        
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
